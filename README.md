@@ -19,16 +19,16 @@ node version: v16.14.2
     TOKEN_SECRET=tokensecret   
 
 
-4. connect to the default postgres database as the server's root user: psql -U postgres
-   create user: CREATE USER sf_user WITH PASSWORD 'password1234';
-   create env db: CREATE DATABASE storefront;
+4. connect to the default postgres database as the server's root user: psql -U postgres                                 
+   create user: CREATE USER sf_user WITH PASSWORD 'password1234';                           
+   create env db: CREATE DATABASE storefront;               
    create test db: CREATE DATABASE storefront_test;
-   Grant for dev db: 
-      \c storefront
-      GRANT ALL PRIVILEGES ON DATABASE storefront TO sf_user;
-   Grant for test db:
-      \c storefront_test
-      GRANT ALL PRIVILEGES ON DATABASE storefront_test TO sf_user;
+   Grant for dev db:                             
+      \c storefront                         
+      GRANT ALL PRIVILEGES ON DATABASE storefront TO sf_user;                            
+   Grant for test db:                        
+      \c storefront_test                    
+      GRANT ALL PRIVILEGES ON DATABASE storefront_test TO sf_user;                           
 
 
 5. run "npm run migrateup" to migrate database tables
