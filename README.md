@@ -15,7 +15,7 @@
     TOKEN_SECRET=   
 
 2. run "npm i" to install all dependancies
-3. run "npm migrate up" to migrate database tables
+3. run "npm migrateup" to migrate database tables
 
 now you are ready to use the app
 
