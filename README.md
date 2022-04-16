@@ -9,17 +9,29 @@ node version: v16.14.2
 3. create .ENV file and add the following variables
     POSTGRES_HOST=127.0.0.1         
     POSTGRES_PORT=5432     
-    POSTGRES_DB=db_name   
-    POSTGRES_TEST_DB=test_db_name   
-    POSTGRES_USER=user_name    
-    POSTGRES_PASS=user_pass   
+    POSTGRES_DB=storefront   
+    POSTGRES_TEST_DB=storefront_test   
+    POSTGRES_USER=sf_user    
+    POSTGRES_PASS=password1234   
     ENV=dev   
     BCRYPT_PASSWORD=any_pass   
     SALT_ROUNDS=1   
     TOKEN_SECRET=tokensecret   
 
 
-4. run "npm run migrateup" to migrate database tables
+4. connect to the default postgres database as the server's root user: psql -U postgres
+   create user: CREATE USER sf_user WITH PASSWORD 'password1234';
+   create env db: CREATE DATABASE storefront;
+   create test db: CREATE DATABASE storefront_test;
+   Grant for dev db: 
+      \c storefront
+      GRANT ALL PRIVILEGES ON DATABASE storefront TO sf_user;
+   Grant for test db:
+      \c storefront_test
+      GRANT ALL PRIVILEGES ON DATABASE storefront_test TO sf_user;
+
+
+5. run "npm run migrateup" to migrate database tables
 
 
 
