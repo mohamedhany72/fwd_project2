@@ -21,6 +21,7 @@ now you are ready to use the app
 
 ## Ports the backend and database are running on
 backend: 3000
+
 database: 5432
 
 ## For routes and schema see REQUIREMENTS.md
