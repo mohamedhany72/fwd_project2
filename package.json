@@ -11,7 +11,8 @@
     "prettier": "prettier --config .prettierrc \"src/**/*.js\" --write",
     "jasmine": "jasmine",
     "test": "db-migrate up --env test  && npm run build && cross-env ENV=test jasmine && db-migrate reset --env test",
-    "migrate":"db-migrate up --env dev"
+    "migrateup":"db-migrate up --env dev",
+    "migratereset":"db-migrate reset --env dev"
   },
   "author": "",
   "license": "ISC",
