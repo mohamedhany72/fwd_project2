@@ -25,4 +25,3 @@ backend: 3000
 database: 5432
 
 ## For routes and schema see REQUIREMENTS.md
-    [An Internal Link](./REQUIREMENTS.md)
