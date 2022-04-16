@@ -4,15 +4,15 @@
 
 ## package installation instructions and how to setup and connect to the database
 1. create .ENV file and add the following variables
-    POSTGRES_HOST=
-    POSTGRES_DB=
-    POSTGRES_TEST_DB=
-    POSTGRES_USER=
-    POSTGRES_PASS=
-    ENV=dev
-    BCRYPT_PASSWORD=
-    SALT_ROUNDS=
-    TOKEN_SECRET=
+    POSTGRES_HOST=   
+    POSTGRES_DB=   
+    POSTGRES_TEST_DB=   
+    POSTGRES_USER=    
+    POSTGRES_PASS=   
+    ENV=dev   
+    BCRYPT_PASSWORD=   
+    SALT_ROUNDS=   
+    TOKEN_SECRET=   
 
 2. run "npm i" to install all dependancies
 3. run "npm migrate up" to migrate database tables
